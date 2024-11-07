@@ -67,7 +67,7 @@ export default function Page() {
       <header className="p-10">
         <h1 className="text-4xl font-bold my-5 text-center">Radar DR-172ADV</h1>
         <p className="text-xl mb-5">
-          Software has provided various functions to enhance user experience in monitoring and managing aircraft. Please follow this guide for using each function.
+          Radar DR-172ADV เป็นซอฟต์แวร์ที่มีฟังก์ชันงานต่าง ๆ เพื่อเพิ่มประสบการณ์และประสิทธิภาพ สำหรับการตรวจสอบและจัดการเครื่องบิน โดยมีฟังก์ชันงานที่สามารถทำงานร่วมกันดังนี้
         </p>
         <ul className="list-disc pl-5">
           {Object.entries(data).map(([sectionName]) => (
@@ -83,13 +83,13 @@ export default function Page() {
       {/* Contact Me Section */}
       <section id="contact-me" className="bg-gray-300 p-10 mt-10 flex flex-col items-center text-center">
         <h2 className="text-3xl font-semibold mb-5">Contact Support</h2>
-        <p>If you have any issues, please fill out the form below, and we will get back to you via email as soon as possible.</p>
+        <p>หากพบปัญหา ต้องการความช่วยเหลือ หรือมีข้อเสนอแนะเพิ่มเติม สามารถกรอกฟอร์มด้านล่างนี้ และเราจะติดต่อกลับผ่านทางอีเมลโดยเร็วที่สุด</p>
         <a
           href="https://forms.gle/PtLNDGzJF5hr2cTW6"
           target="_blank"
           className="text-2xl text-blue-600 hover:text-blue-800 mt-5"
         >
-          Click here to contact support
+          คลิกที่นี่เพื่อติดต่อฝ่ายสนับสนุน
         </a>
       </section>
     </div>

@@ -1,3 +1,5 @@
+//SymbolsManagement
+
 "use client";
 import React from 'react';
 import Link from 'next/link';
@@ -14,6 +16,8 @@ interface Section {
   description: string;
   features: Feature[];
 }
+
+const selectedSection = 'SymbolsManagement';
 
 function FeatureList({ features }: { features: Feature[] }) {
   return (
@@ -34,8 +38,33 @@ function FeatureList({ features }: { features: Feature[] }) {
   );
 }
 
+function SectionDisplay({ title, section }: { title: string; section: Section }) {
+  
+  return (
+    <section id={title} className="bg-gray-100 p-10">
+      <div className="bg-gray-400 p-8">
+        <h2 className="text-3xl font-bold">{title}</h2>
+        <p className="list-inside p-5">{section.description}</p>
+        <ul className="list-disc pl-5">
+          {section.features.map((feature) => (
+            <li key={feature.name}>
+              <a href={`#${feature.name}`} className="text-gray-600 hover:text-black my-5">
+                {feature.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="bg-gray-200 p-8">
+        <FeatureList features={section.features} />
+      </div>
+    </section>
+  );
+}
+
 export default function Page() {
   const data = Doc as unknown as Record<string, Section>;
+  const sectionToDisplay = data[selectedSection];
 
   return (
     <div>
@@ -55,36 +84,7 @@ export default function Page() {
           ))}
         </ul>
       </nav>
-      
-      <header className="bg-gray-100 p-10">
-        <h1 className="text-4xl font-bold my-5 text-center ">Radar DR-172ADV</h1>
-        <p className='text-1xl mb-5'>
-          Software has provided various functions to enhance user experience in monitoring and managing aircraft. Please follow this guide for using each function.
-        </p>
-        <ul className="list-disc pl-5">
-          {Object.entries(data).map(([sectionName, section]) => (
-            <li key={sectionName}>
-              <Link href={`/pages/${sectionName}`} className="hover:text-gray-300">
-                {sectionName}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </header>
-
-      {/* Contact Me Section */}
-      <section id="contact-me" className="bg-gray-200 p-10 mt-10 flex flex-col items-center justify-center text-center">
-        <h2 className="text-3xl font-semibold mb-5">Contact Support</h2>
-        <p>If you have any issues, please fill out the form below, and we will get back to you via email as soon as possible.</p>
-        <ul className="list-disc pl-5 mt-5">
-            <a 
-              href="https://forms.gle/your-google-form-link" 
-              target="_blank" 
-              className="text-2xl text-blue-600 hover:text-blue-800 flex items-center space-x-2 cursor-pointer">
-              <span>Click here to contact support</span>
-            </a>
-        </ul>
-      </section>
+      {sectionToDisplay && <SectionDisplay key={selectedSection} title={selectedSection} section={sectionToDisplay} />}
     </div>
   );
 }

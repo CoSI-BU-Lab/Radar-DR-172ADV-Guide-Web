@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Doc from '@/data/data.json';
 
@@ -41,8 +41,11 @@ function SectionDisplay({ title, section }: { title: string; section: Section })
   return (
     <section id={title} className="bg-gray-100 p-10">
       <div className="bg-gray-400 p-8">
-        <h2 className="text-3xl font-bold">{title}</h2>
-        <p className="list-inside p-5">{section.description}</p>
+      <div className="bg-gray-400 flex flex-col ">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">{title}</h2>
+        <p className="list-inside my-5 text-base md:text-lg lg:text-xl">{section.description}</p>
+      </div>
+
         <ul className="list-disc pl-5">
           {section.features.map((feature) => (
             <li key={feature.name}>
@@ -63,17 +66,25 @@ function SectionDisplay({ title, section }: { title: string; section: Section })
 export default function Page() {
   const data = Doc as unknown as Record<string, Section>;
   const sectionToDisplay = data[selectedSection];
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div>
-      <nav className='nav'>
-        <ul className="flex space-x-4">
+      <nav className="nav">
+        <div className="flex justify-between items-center">
+          <button
+            className="text-2xl md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </button>
+        </div>
+        <ul className={`flex flex-wrap md:flex-row md:space-x-4 mt-4 md:mt-0 ${menuOpen ? 'block' : 'hidden'} md:flex`}>
           <li>
             <Link href="/" className="hover:text-gray-300">
               Home
             </Link>
           </li>
-          {Object.entries(data).map(([sectionName, section]) => (
+          {Object.entries(data).map(([sectionName]) => (
             <li key={sectionName}>
               <Link href={`/pages/${sectionName}`} className="hover:text-gray-300">
                 {sectionName}

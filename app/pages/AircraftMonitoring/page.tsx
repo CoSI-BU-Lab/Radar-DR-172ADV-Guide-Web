@@ -1,4 +1,4 @@
-//AreaManagement
+//AircraftMonitoring
 
 "use client";
 import React, { useState } from 'react';
@@ -17,7 +17,7 @@ interface Section {
   features: Feature[];
 }
 
-const selectedSection = 'AreaManagement';
+const selectedSection = 'AircraftMonitoring';
 
 function FeatureList({ features }: { features: Feature[] }) {
   return (

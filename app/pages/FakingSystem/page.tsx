@@ -1,4 +1,4 @@
-//AreaManagement
+//FakingSystem
 
 "use client";
 import React, { useState } from 'react';
@@ -17,7 +17,7 @@ interface Section {
   features: Feature[];
 }
 
-const selectedSection = 'AreaManagement';
+const selectedSection = 'FakingSystem';
 
 function FeatureList({ features }: { features: Feature[] }) {
   return (

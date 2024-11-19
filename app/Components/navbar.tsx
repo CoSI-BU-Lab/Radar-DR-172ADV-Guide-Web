@@ -63,14 +63,14 @@ function Dropdown({ label, items, isOpen, onToggle }: DropdownProps) {
                                 fillRule="evenodd"
                                 d="M5.293 12.707a1 1 0 011.414 0L10 9.414l3.293 3.293a1 1 0 111.414-1.414l-4-4a1 1 0 01-1.414 0l-4 4a1 1 0 010 1.414z"
                                 clipRule="evenodd"
-                                />
+                            />
                         </svg>
                     ) : (
                         <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-5 h-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
                         >
                             <path
                                 fillRule="evenodd"
@@ -105,24 +105,21 @@ function Dropdown({ label, items, isOpen, onToggle }: DropdownProps) {
 
 function UserProfile() {
     return (
-        <Link className="flex items-center gap-4 bg-white p-4" href={""}>
-            <img
-                className="size-10 rounded-full object-cover"
-                alt="Profile"
-                src="Icon_Dark.png"
-            /> 
-            <div >
+        <div className="flex items-center gap-4 bg-white p-4">
+            <img className="size-10 rounded-full object-cover" alt="Profile" src="Icon_Dark.png" />
+            <div>
                 <p className="text-sm">
                     <strong className="block font-bold py-2">Center of Specialty Innovation</strong>
                     <Link
                         href="mailto:bumit.lab@gmail.com"
-                        className=" font-bold text-blue-600 border border-blue-600 rounded-lg bg-transparent px-3 py-1 hover:bg-blue-600 hover:text-white transition"
+                        className="font-bold text-blue-600 border border-blue-600 rounded-lg bg-transparent px-3 py-1 hover:bg-blue-600 hover:text-white transition"
                     >
                         Contact us
                     </Link>
                 </p>
             </div>
-        </Link>
+        </div>
+
     );
 }
 

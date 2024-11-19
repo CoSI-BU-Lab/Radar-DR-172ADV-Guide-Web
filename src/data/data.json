@@ -1,0 +1,396 @@
+{
+  "en": {
+    "MapOperation": {
+      "description": "Tools of interaction with map, function for this section is below",
+      "features": [
+        {
+          "name": "Zoom In - Zoom Out",
+          "description": "Allows users to zoom in on the map to view details more closely or zoom out on the map for a broader perspective. (User can use scroll button on mouse for Zoom-In and Zoom-Out.)",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/ZoomIn-ZoomOut.gif?raw=true"
+        },
+        {
+          "name": "Capture Map",
+          "description": "Captures and saves the current map view as an image, focusing only on map and objects (not including side panel and feature button).",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/CaptureMap.gif?raw=true"
+        },
+        {
+          "name": "Map Types",
+          "description": "Allows users to switch between different map types: Google, Terrain, Hybrid, Yandex, UMP. (Map provided is offline for system security.)",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/MapTypes.gif?raw=true"
+        },
+        {
+          "name": "Map Dark/Light Mode",
+          "description": "Toggles the map display between dark and light modes for better visibility.",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/DarkLightMode.gif?raw=true"
+        },
+        {
+          "name": "Unit of Pinned Location",
+          "description": "Allows users to change the unit of measurement for coordinates of pinned locations.",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/ConvertPinnedUnit.gif?raw=true"
+        },
+        {
+          "name": "Areas and Symbols",
+          "features": [
+            {
+              "name": "Save Areas and Symbols",
+              "description": "Saves the current areas and symbols for future use.",
+              "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/SaveAreaAndSymbols.gif?raw=true"
+            },
+            {
+              "name": "Load Areas and Symbols",
+              "description": "Loads the saved areas and symbols onto the map.",
+              "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/LoadAreaAndSymbols.gif?raw=true"
+            },
+            {
+              "name": "Clear Areas and Symbols",
+              "description": "Clears all areas and symbols currently displayed on the map.",
+              "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/ClearAS.gif?raw=true"
+            }
+          ]
+        }
+      ]
+    },
+    "SystemSettings": {
+      "description": "General settings of the system with multiple sections",
+      "features": [
+        {
+          "name": "Display Unit",
+          "description": "Adjusts the speed line representation for aircraft, either head or tail.",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/DisplayUnit.gif?raw=true"
+        },
+        {
+          "name": "Measurement Unit",
+          "description": "Configures units for position, altitude, speed, and bearing.",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/MeasurementUnit.gif?raw=true"
+        },
+        {
+          "name": "Quick Measurement Setting",
+          "description": "A quick setup option to match system settings.",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/QuickMeasurementUnit.gif?raw=true"
+        },
+        {
+          "name": "Max Speed for Collision Point Calculation",
+          "description": "Sets the maximum speed for aircraft when calculating collision points.",
+          "image": null
+        },
+        {
+          "name": "Radar Radius Setting",
+          "description": "Manages four radar radius circles, allowing individual toggling on or off.",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/RadarSettings.gif?raw=true"
+        },
+        {
+          "name": "Send-Receive Port Data",
+          "description": "Configures serial port data transmission, with settings for port, bps, data bits, parity, stop bits, and flow control.",
+          "image": null
+        }
+      ]
+    },
+    "MapSettings": {
+      "description": "Settings for radar position and range on the map",
+      "features": [
+        {
+          "name": "Radar Position",
+          "description": "Sets the radar's central position on the map.",
+          "image": null
+        },
+        {
+          "name": "Radar",
+          "description": "Defines radar parameters for coverage and range display on the map.",
+          "image": null
+        }
+      ]
+    },
+    "AreaManagement": {
+      "description": "Defines, modifies, or removes areas by pinning at least three points",
+      "features": [
+        {
+          "name": "Create Area",
+          "description": "Creates a new area on the map.",
+          "image": null
+        },
+        {
+          "name": "Edit Area",
+          "description": "Edits an existing area on the map.",
+          "image": null
+        },
+        {
+          "name": "Delete Area",
+          "description": "Deletes an area from the map.",
+          "image": null
+        }
+      ]
+    },
+    "SymbolsManagement": {
+      "description": "Manages military symbols on the map",
+      "features": [
+        {
+          "name": "Create Symbol",
+          "description": "Creates a new symbol on the map.",
+          "image": null
+        },
+        {
+          "name": "Edit Symbol",
+          "description": "Edits an existing symbol on the map.",
+          "image": null
+        },
+        {
+          "name": "Delete Symbols",
+          "description": "Deletes symbols from the map.",
+          "image": null
+        }
+      ]
+    },
+    "FakingSystem": {
+      "description": "Aircraft simulation system where users input required information before adding simulated aircraft",
+      "features": [
+        {
+          "name": "Add Faker Aircraft",
+          "description": "Inserts a simulated aircraft onto the map, requiring complete data input.",
+          "image": null
+        },
+        {
+          "name": "Faker Information",
+          "description": "Displays detailed information on simulated aircraft.",
+          "image": null
+        },
+        {
+          "name": "Edit Faker Status",
+          "description": "Modifies the status of simulated aircraft.",
+          "image": null
+        },
+        {
+          "name": "Delete Faker Aircraft",
+          "description": "Removes simulated aircraft from the map.",
+          "image": null
+        }
+      ]
+    },
+    "MeasurementTools": {
+      "description": "Tools for measuring distance and calculating potential collisions between aircraft",
+      "features": [
+        {
+          "name": "Calculation Collision",
+          "description": "Calculates potential collision points between two selected aircraft. (Select first aircraft -> Select second aircraft, then wait for system calculation.)",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/MeasureDistance.gif?raw=true"
+        },
+        {
+          "name": "Measure Distance",
+          "description": "Measures distances between various points, including aircraft and ground locations. (Can measure only between two items, such as Aircraft-Aircraft, Aircraft-Symbol, Symbol-Symbol, etc.)",
+          "image": null
+        }
+      ]
+    },
+    "AircraftMonitoring": {
+      "description": "System for monitoring aircraft on the map",
+      "features": [
+        {
+          "name": "Select Aircraft",
+          "description": "Allows users to select specific aircraft on the map for closer inspection. (User can press and hold 'F' button on keyboard then Left-click desired track.)",
+          "image": null
+        },
+        {
+          "name": "Aircraft Information",
+          "description": "Displays detailed information about selected aircraft, including Track ID, IFF, position, speed, direction, altitude, and status. Simulated tracks allow status modification and track deletion.",
+          "image": null
+        }
+      ]
+    }
+  },
+  "th": {
+    "แผนที่": {
+      "description": "เครื่องมือสำหรับการโต้ตอบกับแผนที่",
+      "features": [
+        {
+          "name": "ซูมเข้า - ซูมออก",
+          "description": "ช่วยให้ผู้ใช้สามารถซูมเข้าแผนที่เพื่อดูรายละเอียด หรือซูมออกเพื่อมุมมองที่กว้างขึ้น (ผู้ใช้สามารถใช้ปุ่มเลื่อนของเมาส์เพื่อซูมเข้าและซูมออก)",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/ZoomIn-ZoomOut.gif?raw=true"
+        },
+        {
+          "name": "จับภาพแผนที่",
+          "description": "จับภาพและบันทึกการแสดงผลแผนที่ปัจจุบัน โดยเน้นเฉพาะแผนที่และวัตถุ (ไม่รวมแผงด้านข้างและปุ่มฟังก์ชัน)",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/CaptureMap.gif?raw=true"
+        },
+        {
+          "name": "ประเภทแผนที่",
+          "description": "ช่วยให้ผู้ใช้สลับระหว่างประเภทแผนที่ต่าง ๆ เช่น Google, Terrain, Hybrid, Yandex, UMP (แผนที่ที่ให้มาจะเป็นออฟไลน์เพื่อความปลอดภัยของระบบ)",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/MapTypes.gif?raw=true"
+        },
+        {
+          "name": "โหมดมืด/สว่างของแผนที่",
+          "description": "สลับการแสดงผลแผนที่ระหว่างโหมดมืดและโหมดสว่าง เพื่อความสะดวกในการมองเห็น",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/DarkLightMode.gif?raw=true"
+        },
+        {
+          "name": "หน่วยของตำแหน่งที่ปักหมุด",
+          "description": "ช่วยให้ผู้ใช้สามารถเปลี่ยนหน่วยวัดสำหรับพิกัดของตำแหน่งที่ปักหมุด",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/ConvertPinnedUnit.gif?raw=true"
+        },
+        {
+          "name": "พื้นที่และสัญลักษณ์",
+          "features": [
+            {
+              "name": "Save Areas and Symbols (บันทึกพื้นที่และสัญลักษณ์)",
+              "description": "บันทึกพื้นที่และสัญลักษณ์ปัจจุบันเพื่อใช้ในอนาคต",
+              "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/SaveAreaAndSymbols.gif?raw=true"
+            },
+            {
+              "name": "Load Areas and Symbols (โหลดพื้นที่และสัญลักษณ์)",
+              "description": "โหลดพื้นที่และสัญลักษณ์ที่บันทึกไว้ลงในแผนที่",
+              "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/LoadAreaAndSymbols.gif?raw=true"
+            },
+            {
+              "name": "Clear Areas and Symbols (ล้างพื้นที่และสัญลักษณ์)",
+              "description": "ล้างพื้นที่และสัญลักษณ์ทั้งหมดที่แสดงอยู่บนแผนที่",
+              "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/ClearAS.gif?raw=true"
+            }
+          ]
+        }
+      ]
+    },
+    "การตั้งค่าระบบ": {
+      "description": "การตั้งค่าทั่วไปของระบบ",
+      "features": [
+        {
+          "name": "หน่วยแสดงผล",
+          "description": "ปรับการแสดงผลของเส้นความเร็วสำหรับเครื่องบิน ว่าจะเป็นหัวหรือหางของเครื่องบิน",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/DisplayUnit.gif?raw=true"
+        },
+        {
+          "name": "หน่วยการวัด",
+          "description": "ตั้งค่าหน่วยสำหรับตำแหน่ง, ความสูง, ความเร็ว และทิศทาง",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/MeasurementUnit.gif?raw=true"
+        },
+        {
+          "name": "การตั้งค่าการวัดอย่างรวดเร็ว",
+          "description": "ตัวเลือกการตั้งค่าอย่างรวดเร็วเพื่อให้ตรงกับการตั้งค่าของระบบ",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/QuickMeasurementUnit.gif?raw=true"
+        },
+        {
+          "name": "ความเร็วสูงสุดสำหรับการคำนวณจุดชน",
+          "description": "ตั้งค่าความเร็วสูงสุดของเครื่องบินในการคำนวณจุดชน",
+          "image": null
+        },
+        {
+          "name": "การตั้งค่ารัศมีเรดาร์",
+          "description": "จัดการวงรัศมีของเรดาร์ 4 วง เพื่อให้สามารถเปิดหรือปิดได้ตามต้องการ",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/RadarSettings.gif?raw=true"
+        },
+        {
+          "name": "การส่ง-รับข้อมูลจากพอร์ต",
+          "description": "ตั้งค่าการส่งข้อมูลผ่าน Port แบบอนุกรม รวมถึงการตั้งค่า port, bps, data bits, parity, stop bits และ flow control",
+          "image": null
+        }
+      ]
+    },
+    "ตั้งค่าแผนที่": {
+      "description": "การตั้งค่าสำหรับตำแหน่งและระยะของเรดาร์บนแผนที่",
+      "features": [
+        {
+          "name": "ตำแหน่งเรดาร์",
+          "description": "ตั้งตำแหน่งกลางของเรดาร์บนแผนที่",
+          "image": null
+        },
+        {
+          "name": "เรดาร์",
+          "description": "กำหนดพารามิเตอร์ของเรดาร์สำหรับการแสดงผลการครอบคลุมและระยะบนแผนที่",
+          "image": null
+        }
+      ]
+    },
+    "จัดการพื้นที่": {
+      "description": "กำหนด แก้ไข หรือลบพื้นที่โดยการปักหมุดอย่างน้อยสามจุด",
+      "features": [
+        {
+          "name": "สร้างพื้นที่",
+          "description": "สร้างพื้นที่ใหม่บนแผนที่",
+          "image": null
+        },
+        {
+          "name": "แก้ไขพื้นที่",
+          "description": "แก้ไขพื้นที่ที่มีอยู่บนแผนที่",
+          "image": null
+        },
+        {
+          "name": "ลบพื้นที่",
+          "description": "ลบพื้นที่ออกจากแผนที่",
+          "image": null
+        }
+      ]
+    },
+    "จัดการสัญลักษณ์": {
+      "description": "จัดการสัญลักษณ์ทางทหารบนแผนที่",
+      "features": [
+        {
+          "name": "สร้างสัญลักษณ์",
+          "description": "สร้างสัญลักษณ์ใหม่บนแผนที่",
+          "image": null
+        },
+        {
+          "name": "แก้ไขสัญลักษณ์",
+          "description": "แก้ไขสัญลักษณ์ที่มีอยู่บนแผนที่",
+          "image": null
+        },
+        {
+          "name": "ลบสัญลักษณ์",
+          "description": "ลบสัญลักษณ์ออกจากแผนที่",
+          "image": null
+        }
+      ]
+    },
+    "ระบบจำลองเครื่องบิน": {
+      "description": "ระบบจำลองเครื่องบินโดยผู้ใช้ต้องกรอกข้อมูลที่จำเป็นก่อน จึงจะสามารถเพิ่มเครื่องบินจำลองลงบนแผนที่ได้",
+      "features": [
+        {
+          "name": "เพิ่มเครื่องบินจำลอง",
+          "description": "เพิ่มเครื่องบินจำลองลงในแผนที่ โดยต้องกรอกข้อมูลให้ครบถ้วน",
+          "image": null
+        },
+        {
+          "name": "ข้อมูลเครื่องบินจำลอง",
+          "description": "แสดงข้อมูลรายละเอียดของเครื่องบินจำลอง",
+          "image": null
+        },
+        {
+          "name": "แก้ไขสถานะเครื่องบินจำลอง",
+          "description": "แก้ไขสถานะของเครื่องบินจำลอง",
+          "image": null
+        },
+        {
+          "name": "ลบเครื่องบินจำลอง",
+          "description": "ลบเครื่องบินจำลองออกจากแผนที่",
+          "image": null
+        }
+      ]
+    },
+    "วัดระยะทาง": {
+      "description": "เครื่องมือสำหรับการวัดระยะทาง และคำนวณความเป็นไปได้ของการชนกันระหว่างเครื่องบิน",
+      "features": [
+        {
+          "name": "คำนวณการชนกัน",
+          "description": "คำนวณจุดการชนกันที่เป็นไปได้ระหว่างเครื่องบินที่เลือกสองลำ (เลือกเครื่องบินแรก -> เลือกเครื่องบินที่สอง จากนั้นรอการคำนวณจากระบบ)",
+          "image": "https://github.com/CoSI-BU-Lab/Radar-DR-172ADV-Document/blob/main/data/helper/MeasureDistance.gif?raw=true"
+        },
+        {
+          "name": "วัดระยะทาง",
+          "description": "วัดระยะทางระหว่างจุดต่าง ๆ รวมถึงระหว่างเครื่องบินและตำแหน่งบนพื้น (สามารถวัดได้ระหว่างสองรายการ เช่น เครื่องบิน-เครื่องบิน, เครื่องบิน-สัญลักษณ์, สัญลักษณ์-สัญลักษณ์ เป็นต้น)",
+          "image": null
+        }
+      ]
+    },
+    "ตรวจสอบสถานะเครื่องบิน": {
+      "description": "ระบบสำหรับการตรวจสอบสถานะของเครื่องบินบนแผนที่",
+      "features": [
+        {
+          "name": "เลือกเครื่องบิน",
+          "description": "ให้ผู้ใช้เลือกเครื่องบินเฉพาะบนแผนที่เพื่อการตรวจสอบที่ใกล้ชิด (ผู้ใช้สามารถกดและค้างปุ่ม 'F' บนคีย์บอร์ดแล้วคลิกซ้ายที่เส้นทางที่ต้องการ)",
+          "image": null
+        },
+        {
+          "name": "ข้อมูลเครื่องบิน",
+          "description": "แสดงข้อมูลรายละเอียดของเครื่องบินที่เลือก เช่น Track ID, IFF, ตำแหน่ง, ความเร็ว, ทิศทาง, ความสูง, และสถานะ เส้นทางจำลองสามารถปรับสถานะและลบเส้นทางได้",
+          "image": null
+        }
+      ]
+    }
+  }
+}

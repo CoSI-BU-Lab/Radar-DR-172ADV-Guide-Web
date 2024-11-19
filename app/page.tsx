@@ -42,7 +42,7 @@ export default function Page() {
   return (
     <div className="flex flex-row w-screen h-screen">
       <div>
-        <div className="">
+        <div >
           <Navbar />
         </div>
       </div>
@@ -68,13 +68,13 @@ export default function Page() {
         <section id="contact-me" className="bg-gray-300 p-10 mt-10 flex flex-col items-center text-center">
           <h2 className="text-3xl font-semibold mb-5">Contact Support</h2>
           <p>If you have any issues, please fill out the form below, and we will get back to you via email as soon as possible.</p>
-          <a
+          <Link
             href="https://forms.gle/PtLNDGzJF5hr2cTW6"
             target="_blank"
             className="text-2xl text-blue-600 hover:text-blue-800 mt-5"
           >
             Click here to contact support
-          </a>
+          </Link>
         </section>
       </div>
     </div>

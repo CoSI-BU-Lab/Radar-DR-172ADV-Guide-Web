@@ -51,9 +51,9 @@ function SectionDisplay({ title, section }: { title: string; section: Section })
         <ul className="list-disc pl-5">
           {section.features.map((feature) => (
             <li key={feature.name}>
-              <a href={`#${feature.name}`} className="text-gray-600 hover:text-black my-5">
+              <Link href={`#${feature.name}`} className="text-gray-600 hover:text-black my-5">
                 {feature.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

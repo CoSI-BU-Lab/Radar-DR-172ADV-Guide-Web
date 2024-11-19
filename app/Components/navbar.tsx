@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 type LinkItem = {
@@ -26,12 +27,12 @@ interface NavLinkProps {
 
 function NavLink({ href, children, className = "" }: NavLinkProps) {
     return (
-        <a
+        <Link
             href={href}
             className={`block rounded-lg px-4 py-2 text-sm font-medium ${className} hover:bg-gray-100 hover:text-gray-700`}
         >
             {children}
-        </a>
+        </Link>
     );
 }
 
@@ -104,24 +105,24 @@ function Dropdown({ label, items, isOpen, onToggle }: DropdownProps) {
 
 function UserProfile() {
     return (
-        <a className="flex items-center gap-4 bg-white p-4">
+        <Link className="flex items-center gap-4 bg-white p-4" href={""}>
             <img
                 className="size-10 rounded-full object-cover"
                 alt="Profile"
                 src="Icon_Dark.png"
             /> 
-            <div className="">
+            <div >
                 <p className="text-sm">
                     <strong className="block font-bold py-2">Center of Specialty Innovation</strong>
-                    <a
+                    <Link
                         href="mailto:bumit.lab@gmail.com"
                         className=" font-bold text-blue-600 border border-blue-600 rounded-lg bg-transparent px-3 py-1 hover:bg-blue-600 hover:text-white transition"
                     >
                         Contact us
-                    </a>
+                    </Link>
                 </p>
             </div>
-        </a>
+        </Link>
     );
 }
 

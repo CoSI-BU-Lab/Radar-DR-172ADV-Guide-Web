@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import Navbar from './Components/navbar';
+import Navbar from '@/app/components/navbar';
 import Link from 'next/link';
 import Doc from '@/data/data.json';
 
@@ -37,7 +37,6 @@ function FeatureList({ features }: { features: Feature[] }) {
 
 export default function Page() {
   const data = Doc as unknown as Record<string, Section>;
-  //const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="flex flex-row w-screen h-screen">

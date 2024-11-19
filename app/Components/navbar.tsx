@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useState } from "react";
@@ -105,9 +106,9 @@ function UserProfile() {
     return (
         <a className="flex items-center gap-4 bg-white p-4">
             <img
-                alt="Profile"
-                src="public/Icon_Dark.png"
                 className="size-10 rounded-full object-cover"
+                alt="Profile"
+                src="Icon_Dark.png"
             /> 
             <div className="">
                 <p className="text-sm">

@@ -32,7 +32,7 @@ function Dropdown({ label, items, isOpen, onToggle }: DropdownProps) {
         <div>
             <div
                 onClick={onToggle}
-                className={`flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 ${isOpen ? "dark:text-gray-200" : "dark:text-gray-300/50"} hover:bg-gray-100 hover:text-gray-700`}
+                className={`flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 ${isOpen ? "dark:text-gray-200 text-gray-600" : "dark:text-gray-300/50 text-gray-400/70"} hover:bg-gray-100 hover:text-gray-700`}
             >
                 <span className="text-sm font-bold">{label}</span>
                 <span className="shrink-0 transition duration-300 transform">
@@ -170,7 +170,7 @@ export default function Navbar() {
         <div className="flex w-64 h-screen flex-col justify-between border-e dark:border-gray-800 select-none">
             <div className="px-4 py-6">
                 <div className="flex">
-                    <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 dark:text-gray-100 dark:bg-gray-800">
+                    <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 bg-gray-200 dark:text-gray-100 dark:bg-gray-800">
                         {t("logo")}
                     </span>
 
@@ -178,14 +178,14 @@ export default function Navbar() {
                         <div
                             // href="#"
                             onClick={() => handleLanguageChange('th', pathname, router)}
-                            className={`rounded-md ${locale != 'th' ? "bg-gray-400" :"bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'th' ? "text-gray-600" :"text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+                            className={`rounded-md ${locale != 'th' ? "bg-gray-400" :"bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'th' ? "text-gray-100" :"text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
                         >
                             TH
                         </div>
                         <div
                             // href="#"
                             onClick={() => handleLanguageChange('en', pathname, router)}
-                            className={`rounded-md ${locale != 'en' ? "bg-gray-400" :"bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'en' ? "text-gray-600" :"text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+                            className={`rounded-md ${locale != 'en' ? "bg-gray-400" :"bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'en' ? "text-gray-100" :"text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
                         >
                             EN
                         </div>

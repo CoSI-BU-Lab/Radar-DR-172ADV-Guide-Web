@@ -5,6 +5,7 @@ import Doc from '@/data/data.json';
 import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import React from "react";
+import Image from "next/image";
 
 export default function dataLayout({
     contents,
@@ -34,7 +35,13 @@ export default function dataLayout({
                     <p className="list-inside p-5">{feature.description}</p>
                     {feature.image && (
                         <div className="flex justify-center">
-                            <img src={feature.image} alt={feature.name} className="max-w-[90%] h-auto" />
+                            <Image
+                                src={feature.image}
+                                width={1200}
+                                height={890}
+                                alt={feature.name}
+                                className="max-w-[90%] h-auto"
+                            />
                         </div>
                     )}
                     {feature.features && <FeatureList features={feature.features} />}

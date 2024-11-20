@@ -90,22 +90,6 @@ function Dropdown({ label, items, isOpen, onToggle }: DropdownProps) {
 function UserProfile({ t, pathname, router }: { t: any, pathname: string, router: any }) {
     return (
         <div>
-            <div className="flex">
-                <div
-                    // href="#"
-                    onClick={() => handleLanguageChange('th', pathname, router)}
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                    TH
-                </div>
-                <div
-                    // href="#"
-                    onClick={() => handleLanguageChange('en', pathname, router)}
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                    EN
-                </div>
-            </div>
             <div className="flex items-center gap-4 p-4">
                 <img className="size-10 rounded-full object-cover dark:invert" alt="Profile" src="/Icon_Dark.png" />
                 <div>
@@ -185,9 +169,28 @@ export default function Navbar() {
     return (
         <div className="flex w-64 h-screen flex-col justify-between border-e dark:border-gray-800 select-none">
             <div className="px-4 py-6">
-                <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 dark:text-gray-100 dark:bg-gray-800">
-                    {t("logo")}
-                </span>
+                <div className="flex">
+                    <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 dark:text-gray-100 dark:bg-gray-800">
+                        {t("logo")}
+                    </span>
+
+                    <div className="flex">
+                        <div
+                            // href="#"
+                            onClick={() => handleLanguageChange('th', pathname, router)}
+                            className={`rounded-md ${locale != 'th' ? "bg-gray-400" :"bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'th' ? "text-gray-600" :"text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+                        >
+                            TH
+                        </div>
+                        <div
+                            // href="#"
+                            onClick={() => handleLanguageChange('en', pathname, router)}
+                            className={`rounded-md ${locale != 'en' ? "bg-gray-400" :"bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'en' ? "text-gray-600" :"text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+                        >
+                            EN
+                        </div>
+                    </div>
+                </div>
 
                 <ul className="mt-6 space-y-1">
                     {menuItems.length > 0 &&

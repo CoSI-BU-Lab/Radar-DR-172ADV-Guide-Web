@@ -2,8 +2,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    distDir: "out",
-    output: "export",
     images: {
         domains: ['cosi.bu.ac.th', 'github.com', 'www.countryflags.com'],
     },
@@ -13,9 +11,9 @@ const nextConfig = {
     images: {
         unoptimized: true, // Required since GitHub Pages doesn't support Next.js image optimization
     },
-    // experimental: {
-    //     outputStandalone: true, // Ensures correct output for static exports
-    // },
+    experimental: {
+        outputStandalone: true, // Ensures correct output for static exports
+    },
 };
 
 export default withNextIntl(nextConfig);

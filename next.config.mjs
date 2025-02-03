@@ -8,9 +8,6 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true, // Allows build to complete even if ESLint errors exist
     },
-    images: {
-        unoptimized: true, // Required since GitHub Pages doesn't support Next.js image optimization
-    },
     experimental: {
         outputStandalone: true, // Ensures correct output for static exports
     },

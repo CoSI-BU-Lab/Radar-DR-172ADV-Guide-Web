@@ -2,9 +2,8 @@
 "use client";
 
 import { MenuItem, NavLinkProps } from "@/types/navbar";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Doc from '@/data/data.json';
-import { Section } from "@/types/doc";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { usePathname, useRouter } from "next/navigation";

@@ -1,5 +1,5 @@
 "use client";
-import { Link } from "@/i18n/routing";
+// import { Link } from "@/i18n/routing";
 import { Feature, Section } from "@/types/doc";
 import Doc from '@/data/data.json';
 import { useLocale } from "next-intl";
@@ -12,12 +12,14 @@ export default function dataLayout({
 }: {
     contents: string;
 }) {
+    //@ts-nocheck
     const locale = useLocale();
+    //@ts-nocheck
     const [sectionToDisplay, setSectionToDisplay] = useState<Section | null>(null);
-
+    //@ts-nocheck
     useEffect(() => {
         const loadSection = async () => {
-            // @ts-ignore - We're assuming the data structure is dynamic with `locale` keys
+            // @ts-ignore
             const data = Doc[locale] as Record<string, Section>;
             const decodedContents = decodeURIComponent(contents);
             const section = data[decodedContents] || null;
@@ -37,8 +39,8 @@ export default function dataLayout({
                         <div className="flex justify-center">
                             <Image
                                 src={feature.image}
-                                width={1200}
-                                height={890}
+                                width={1920}
+                                height={1080}
                                 alt={feature.name}
                                 className="max-w-[90%] h-auto"
                             />

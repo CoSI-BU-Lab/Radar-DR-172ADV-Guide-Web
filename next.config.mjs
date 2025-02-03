@@ -1,7 +1,8 @@
+/** @type {import('next').NextConfig} */
 import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin();
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+    distDir: "out",
     output: "export",
     images: {
         domains: ['cosi.bu.ac.th', 'github.com', 'www.countryflags.com'],

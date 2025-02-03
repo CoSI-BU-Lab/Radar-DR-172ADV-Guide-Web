@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
     // distDir: "out",
-    // output: "export",
+    output: "export",
     images: {
         domains: ['cosi.bu.ac.th', 'github.com', 'www.countryflags.com'],
         unoptimized: true, // Required since GitHub Pages doesn't support Next.js image optimization

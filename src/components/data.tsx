@@ -35,7 +35,17 @@ export default function dataLayout({
                 <li className="p-5 my-5" id={feature.name} key={feature.name}>
                     <h3 className="text-2xl font-bold">{feature.name}</h3>
                     <p className="list-inside p-5">{feature.description}</p>
-                    {feature.image && (
+                    {feature.video ? (
+                        <div className="flex justify-center">
+                            <video
+                                src={feature.video}
+                                width="90%"
+                                height="auto"
+                                controls
+                                className="max-w-[90%] h-auto"
+                            />
+                        </div>
+                    ) : feature.image ? (
                         <div className="flex justify-center">
                             <Image
                                 src={feature.image}
@@ -45,7 +55,7 @@ export default function dataLayout({
                                 className="max-w-[90%] h-auto"
                             />
                         </div>
-                    )}
+                    ) : null}
                     {feature.features && <FeatureList features={feature.features} />}
                 </li>
             ))}

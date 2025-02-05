@@ -170,26 +170,27 @@ export default function Navbar() {
             <div className="px-4 py-6">
                 <div className="flex">
                     <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 bg-gray-200 dark:text-gray-100 dark:bg-gray-800">
-                        {t("logo")}
+                        <img src="/logo.png" alt="Logo" className="h-10 w-32 object-contain" />
                     </span>
 
                     <div className="flex">
                         <div
                             // href="#"
                             onClick={() => handleLanguageChange('th', pathname, router)}
-                            className={`rounded-md ${locale != 'th' ? "bg-gray-400" :"bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'th' ? "text-gray-100" :"text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+                            className={`rounded-md ${locale != 'th' ? "bg-gray-400" : "bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'th' ? "text-gray-100" : "text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
                         >
                             TH
                         </div>
                         <div
                             // href="#"
                             onClick={() => handleLanguageChange('en', pathname, router)}
-                            className={`rounded-md ${locale != 'en' ? "bg-gray-400" :"bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'en' ? "text-gray-100" :"text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+                            className={`rounded-md ${locale != 'en' ? "bg-gray-400" : "bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'en' ? "text-gray-100" : "text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
                         >
                             EN
                         </div>
                     </div>
                 </div>
+
 
                 <ul className="mt-6 space-y-1">
                     {menuItems.length > 0 &&
@@ -212,7 +213,8 @@ export default function Navbar() {
                 </ul>
             </div>
 
-            <div className="sticky inset-x-0 bottom-0 border-t border-gray-100 dark:border-gray-800">
+            {/*<div className="sticky inset-x-0 bottom-0 border-t border-gray-100 dark:border-gray-800">*/}
+            <div className="mt-auto px-4 py-6">
                 <UserProfile
                     t={t}
                     pathname={pathname}

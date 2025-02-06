@@ -111,6 +111,7 @@ const handleLanguageChange = (lang: string, pathname: string, router: any) => {
     router.replace(`/${lang.toLowerCase()}`);
 }
 
+
 export default function Navbar() {
     const locale = useLocale();
     const t = useTranslations('HomePage');
@@ -123,8 +124,15 @@ export default function Navbar() {
 
     const router = useRouter();
 
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+
     const handleDropdownToggle = (label: string) => {
         setOpenDropdown((prev) => (prev === label ? null : label));
+    };
+
+    const toggleNavbar = () => {
+        setIsNavbarVisible(prev => !prev);
     };
 
     const jsonToMenuItems = (data: any): MenuItem[] => {
@@ -165,61 +173,83 @@ export default function Navbar() {
         }
     }, [data]);
 
-    return (
-        <div className="flex w-64 h-screen flex-col justify-between border-e dark:border-gray-800 select-none">
-            <div className="px-4 py-6">
-                <div className="flex">
-                    <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 dark:text-gray-100 dark:bg-gray-800">
-                        <img src="/Logo_Gray.png" alt="Logo" className="h-10 w-32 object-contain" />
-                    </span>
 
-                    <div className="flex">
-                        <div
-                            // href="#"
-                            onClick={() => handleLanguageChange('th', pathname, router)}
-                            className={`rounded-md ${locale != 'th' ? "bg-gray-400" : "bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'th' ? "text-gray-100" : "text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
-                        >
-                            TH
+
+    return (
+        <div className="relative">
+
+<div className={`flex transition-all duration-300 ease-in-out ${isNavbarVisible ? 'translate-x-0' : '-translate-x-64'}`}>
+                <div className="flex w-64 h-screen flex-col justify-between border-e dark:border-gray-800 select-none">
+                    <div className="px-4 py-6">
+                        <div className="flex">
+                            <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 dark:text-gray-100 dark:bg-gray-800">
+                                <img src="/Logo_Gray.png" alt="Logo" className="h-10 w-32 object-contain" />
+                            </span>
+
+                            <div className="flex">
+                                <div
+                                    // href="#"
+                                    onClick={() => handleLanguageChange('th', pathname, router)}
+                                    className={`rounded-md ${locale != 'th' ? "bg-gray-400" : "bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'th' ? "text-gray-100" : "text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+                                >
+                                    TH
+                                </div>
+                                <div
+                                    // href="#"
+                                    onClick={() => handleLanguageChange('en', pathname, router)}
+                                    className={`rounded-md ${locale != 'en' ? "bg-gray-400" : "bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'en' ? "text-gray-100" : "text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
+                                >
+                                    EN
+                                </div>
+                            </div>
                         </div>
-                        <div
-                            // href="#"
-                            onClick={() => handleLanguageChange('en', pathname, router)}
-                            className={`rounded-md ${locale != 'en' ? "bg-gray-400" : "bg-indigo-600"} px-3.5 py-2.5 text-sm font-semibold ${locale != 'en' ? "text-gray-100" : "text-white"} shadow-sm ${locale != 'th' && "hover:text-white"} hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
-                        >
-                            EN
-                        </div>
+
+
+                        <ul className="mt-6 space-y-1">
+                            {menuItems.length > 0 &&
+                                menuItems.map((item, index) => (
+                                    <li key={index}>
+                                        {item.type === "link" ? (
+                                            <NavLink href={item.href} className={item.className || ""}>
+                                                {item.label}
+                                            </NavLink>
+                                        ) : (
+                                            <Dropdown
+                                                label={item.label}
+                                                items={item.items}
+                                                isOpen={openDropdown === item.label}
+                                                onToggle={() => handleDropdownToggle(item.label)}
+                                            />
+                                        )}
+                                    </li>
+                                ))}
+                        </ul>
+                    </div>
+
+                    {/*<div className="sticky inset-x-0 bottom-0 border-t border-gray-100 dark:border-gray-800">*/}
+                    <div className="mt-auto px-4 py-6">
+                        <UserProfile
+                            t={t}
+                            pathname={pathname}
+                            router={router}
+                        />
                     </div>
                 </div>
-
-
-                <ul className="mt-6 space-y-1">
-                    {menuItems.length > 0 &&
-                        menuItems.map((item, index) => (
-                            <li key={index}>
-                                {item.type === "link" ? (
-                                    <NavLink href={item.href} className={item.className || ""}>
-                                        {item.label}
-                                    </NavLink>
-                                ) : (
-                                    <Dropdown
-                                        label={item.label}
-                                        items={item.items}
-                                        isOpen={openDropdown === item.label}
-                                        onToggle={() => handleDropdownToggle(item.label)}
-                                    />
-                                )}
-                            </li>
-                        ))}
-                </ul>
-            </div>
-
-            {/*<div className="sticky inset-x-0 bottom-0 border-t border-gray-100 dark:border-gray-800">*/}
-            <div className="mt-auto px-4 py-6">
-                <UserProfile
-                    t={t}
-                    pathname={pathname}
-                    router={router}
-                />
+                <button
+                    onClick={() => setIsNavbarVisible(prev => !prev)}
+                    className="h-24 w-6 bg-gray-200 dark:bg-gray-700 rounded-r-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 flex items-center justify-center self-center border-y border-r dark:border-gray-800"
+                    aria-label={isNavbarVisible ? "Hide Navbar" : "Show Navbar"}
+                >
+                    {isNavbarVisible ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-600 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-600 dark:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    )}
+                </button>
             </div>
         </div>
     );

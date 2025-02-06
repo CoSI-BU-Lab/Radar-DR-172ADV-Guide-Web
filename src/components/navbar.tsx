@@ -169,8 +169,8 @@ export default function Navbar() {
         <div className="flex w-64 h-screen flex-col justify-between border-e dark:border-gray-800 select-none">
             <div className="px-4 py-6">
                 <div className="flex">
-                    <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 bg-gray-200 dark:text-gray-100 dark:bg-gray-800">
-                        <img src="/logo.png" alt="Logo" className="h-10 w-32 object-contain" />
+                    <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 dark:text-gray-100 dark:bg-gray-800">
+                        <img src="/Logo_Gray.png" alt="Logo" className="h-10 w-32 object-contain" />
                     </span>
 
                     <div className="flex">

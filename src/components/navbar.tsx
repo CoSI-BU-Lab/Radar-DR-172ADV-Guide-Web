@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -178,15 +179,15 @@ export default function Navbar() {
     return (
         <div className="relative">
 
-<div className={`flex transition-all duration-300 ease-in-out ${isNavbarVisible ? 'translate-x-0' : '-translate-x-64'}`}>
+            <div className={`flex transition-all duration-300 ease-in-out ${isNavbarVisible ? 'translate-x-0' : '-translate-x-64'}`}>
                 <div className="flex w-64 h-screen flex-col justify-between border-e dark:border-gray-800 select-none">
-                    <div className="px-4 py-6">
+                    <div className="px-4 py-6 min-h-80 overflow-auto">
                         <div className="flex">
-                            <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 dark:text-gray-100 dark:bg-gray-800">
+                            <span className="grid h-10 w-32 place-content-center rounded-lg text-xs text-gray-600 dark:text-gray-100">
                                 <img src="/Logo_Gray.png" alt="Logo" className="h-10 w-32 object-contain" />
                             </span>
 
-                            <div className="flex">
+                            <div className="flex space-x-2">
                                 <div
                                     // href="#"
                                     onClick={() => handleLanguageChange('th', pathname, router)}

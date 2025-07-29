@@ -199,6 +199,50 @@
           "video": "/Video/Aircraft Monitoring/AircraftInformation.mp4"
         }
       ]
+    },
+    "Maintenance Manual": {
+      "description": "Maintenance manual document for the system",
+      "features": [
+        {
+          "name": "Overview Maintenance Manual",
+          "description": "<p>The <strong>RADAR DR-172 ADV</strong> is a <em>Modern Air Situation Display (MASD)</em> system designed for real-time radar data visualization, aircraft tracking, and airspace management. Built on the <strong>.NET 8.0 framework</strong> with <strong>Windows Forms</strong>, the system combines high-performance radar data processing with intuitive geographic mapping and advanced monitoring tools.</p><p>The system is primarily used in <strong>air traffic control environments</strong>, military air defense, and advanced air monitoring scenarios. It integrates hardware-based radar data, network data streams, and recorded datasets into a unified display platform, providing operators with a comprehensive situational awareness tool.</p>"
+        },
+        {
+          "name": "Key Features",
+          "description": "<ul class='styled-list'><li><strong>Real-time radar data</strong> processing and display</li><li><strong>Aircraft tracking</strong> and monitoring</li><li><strong>Geographic mapping</strong> with GMap.NET integration</li><li><strong>Serial communication</strong> for data input</li><li>Various <strong>measurement</strong> and <strong>analysis tools</strong></li><li><strong>Territory</strong> and <strong>symbol management</strong></li><li><strong>IFF (Identification Friend or Foe)</strong> processing</li></ul>"
+        },
+        {
+          "name": "System Requirements",
+          "description": "<ul class='styled-list'><li><strong>Operating System:</strong> Windows 11 or later</li><li><strong>Processor:</strong> Intel Core i5 or equivalent</li><li><strong>RAM:</strong> 16 GB or more</li><li><strong>Graphics:</strong> DirectX 11 compatible graphics card</li><li><strong>Storage:</strong> Minimum 500 GB free space</li></ul>"
+        },
+        {
+          "name": "Technology Stack",
+          "description": "<ul class='styled-list'><li><strong>Framework:</strong> .NET 8.0 (Windows)</li><li><strong>UI Framework:</strong> Windows Forms</li><li><strong>Mapping:</strong> GMap.NET.WinForms</li><li><strong>Geographic Calculations:</strong> CoordinateSharp, GeographicLib.NET</li><li><strong>Communication:</strong> System.IO.Ports for serial communication</li><li><strong>Build System:</strong> MSBuild with .NET SDK</li></ul>"
+        },
+        {
+          "name": "Key Components",
+          "description": "<ul class='styled-list'><li><strong>Radar Data Processing</strong><ul><li><code>DecoderService</code>: Processes raw radar data streams</li><li><code>TrackService</code>: Manages aircraft track processing</li></ul></li><li><strong>Geographic Mapping</strong><ul><li><code>GMap.NET</code> Integration: Provides map display functionality</li><li><strong>Coordinate Systems:</strong> Supports various geographic coordinate systems</li><li><strong>Overlays:</strong> Manages different map layers (radar, aircraft, markers)</li></ul></li><li><strong>Communication Systems</strong><ul><li><strong>Serial Communication:</strong> Interfaces with radar hardware</li><li><strong>UDP Communication:</strong> Network-based data transmission</li><li><strong>Data Channels:</strong> Multiple input channel support</li></ul></li><li><strong>User Interface</strong><ul><li><strong>Multi-Form Architecture:</strong> Separate forms for different functionalities</li><li><strong>Custom Controls:</strong> Specialized radar display controls</li><li><strong>Settings Management:</strong> Comprehensive configuration system</li></ul></li></ul>"
+        },
+        {
+          "name": "Configuration Management",
+          "description": "<ul class='styled-list'><li><strong>Settings Categories</strong><ul><li><strong>General Settings:</strong> Application-wide configurations</li><li><strong>Map Settings:</strong> Geographic display preferences</li><li><strong>Communication Settings:</strong> Serial and UDP configurations</li><li><strong>Display Settings:</strong> UI and visualization options</li></ul></li><li><strong>Configuration Files</strong><ul><li>Settings are managed through the .NET configuration system</li><li>Custom settings classes in <code>Managers/SettingCus/</code></li><li>Persistent storage for user preferences</li></ul></li></ul>"
+        },
+        {
+          "name": "Data Processing Pipeline",
+          "description": "<ul class='styled-list'><li><strong>Input Sources</strong><ul><li><strong>Serial Ports:</strong> Direct hardware connection</li><li><strong>UDP Network:</strong> Network-based data streams</li></ul></li><li><strong>Processing Stages</strong><ul><li><strong>Data Reception:</strong> Raw data acquisition</li><li><strong>Decoding:</strong> Signal processing and interpretation</li><li><strong>Track Processing:</strong> Aircraft identification and tracking</li><li><strong>Display Update:</strong> Real-time visualization</li></ul></li><li><strong>Output</strong><ul><li>Real-time radar display</li><li>Aircraft track information</li><li>Alert and warning systems</li><li>Data logging and recording</li></ul></li></ul>"
+        },
+        {
+          "name": "Troubleshooting Quick Fixes",
+          "description": "<ul class='styled-list'><li><strong>Common Issues</strong><ul><li><strong>\"Cannot load map tiles\"</strong><ul><li>Check internet connection</li><li>Verify proxy settings if applicable</li><li>Try different map provider</li></ul></li><li><strong>\"Serial port access denied\"</strong><ul><li>Run as administrator</li><li>Check if port is in use by another application</li><li>Verify port settings match hardware</li></ul></li><li><strong>\"Application won't start\"</strong><ul><li>Check .NET runtime installation</li><li>Verify all dependencies are available</li><li>Review application logs</li></ul></li></ul></li></ul>"
+        },{
+          "name": "User Guide",
+          "description":"<ul><li>Launch the Application<ul><li>Double-click an executable (Rader-172 ADV.exe) or start a web dashboard.</li><li>The system loads the required modules (serial, UDP, file playback).</li></ul></li><li>Select Input Source<ul><li>In the UI, choose one of:</li><li>Serial Port – Plug in the hardware device and select the port (e.g., COM3).</li><li>UDP Network – Enter the network IP and port to listen for incoming data.</li><li>Start Data Processing<ul><li>Click “on” to begin real-time data reception and decoding in setting menu.</li></ul></li><li>View Real-time Radar Display<ul><li>The UI shows a radar-like screen with aircraft positions and IDs.</li><li>Zoom, pan, or filter tracks by parameters (altitude, ID, etc.).</li></ul></li><li>Check Aircraft Information<ul><li>Click or hover over an aircraft icon to see its details (speed, altitude, heading).</li><li>Alerts or warnings (e.g., conflict detection) will pop up automatically.</li></ul></li></ul>"
+        },
+        {
+          "name": "Support Contacts CoSI Lab. Bangkok University.",
+          "description": "<p class='contact'><strong>Development Team:</strong> +662 407 3888 ext. 2310</p>"
+        }
+      ]
     }
   },
   "th": {
@@ -401,6 +445,51 @@
           "video": "/Video/Aircraft Monitoring/AircraftInformation.mp4"
         }
       ]
-    }
+    },
+    "เอกสารคู่มือซ่อมบำรุง": {
+    "description": "เอกสารคู่มือการบำรุงรักษาสำหรับระบบ",
+    "features": [
+      {
+        "name": "ภาพรวมของคู่มือการบำรุงรักษา",
+        "description": "<p><strong>RADAR DR-172 ADV</strong> คือ <em>Modern Air Situation Display (MASD)</em> สำหรับแสดงข้อมูลเรดาร์แบบเรียลไทม์ การติดตามเครื่องบิน และการจัดการน่านฟ้า สร้างขึ้นบน <strong>.NET 8.0 framework</strong> ด้วย <strong>Windows Forms</strong> ผสานการประมวลผลข้อมูลเรดาร์ประสิทธิภาพสูงกับแผนที่ภูมิศาสตร์และเครื่องมือมอนิเตอร์ขั้นสูง</p><p>ระบบนี้ใช้งานหลักใน <strong>ศูนย์ควบคุมการจราจรทางอากาศ</strong> กองทัพ และการตรวจการณ์ทางอากาศขั้นสูง รองรับการแสดงข้อมูลจากฮาร์ดแวร์เรดาร์, ข้อมูลเครือข่าย และไฟล์ข้อมูลที่บันทึก นำเสนอในแพลตฟอร์มเดียวเพื่อให้ผู้ปฏิบัติงานเห็นภาพรวมของสถานการณ์</p>"
+      },
+      {
+        "name": "คุณสมบัติเด่น",
+        "description": "<ul class='styled-list'><li><strong>ประมวลผลและแสดงข้อมูลเรดาร์แบบเรียลไทม์</strong></li><li><strong>ติดตามและมอนิเตอร์เครื่องบิน</strong></li><li><strong>แผนที่ภูมิศาสตร์</strong> ด้วยการเชื่อมต่อ GMap.NET</li><li><strong>สื่อสารผ่านพอร์ตอนุกรม</strong> สำหรับรับข้อมูล</li><li>มี <strong>เครื่องมือวัด</strong> และ <strong>วิเคราะห์ข้อมูล</strong></li><li><strong>จัดการเขตแดน</strong> และ <strong>สัญลักษณ์</strong></li><li><strong>ประมวลผล IFF (Identification Friend or Foe)</strong></li></ul>"
+      },
+      {
+        "name": "ข้อกำหนดของระบบ",
+        "description": "<ul class='styled-list'><li><strong>ระบบปฏิบัติการ:</strong> Windows 11 หรือใหม่กว่า</li><li><strong>หน่วยประมวลผล:</strong> Intel Core i5 หรือเทียบเท่า</li><li><strong>RAM:</strong> 16 GB ขึ้นไป</li><li><strong>กราฟิก:</strong> การ์ดกราฟิกที่รองรับ DirectX 11</li><li><strong>พื้นที่จัดเก็บ:</strong> ขั้นต่ำ 500 GB</li></ul>"
+      },
+      {
+        "name": "เทคโนโลยีที่ใช้",
+        "description": "<ul class='styled-list'><li><strong>เฟรมเวิร์ก:</strong> .NET 8.0 (Windows)</li><li><strong>UI Framework:</strong> Windows Forms</li><li><strong>แผนที่:</strong> GMap.NET.WinForms</li><li><strong>คำนวณภูมิศาสตร์:</strong> CoordinateSharp, GeographicLib.NET</li><li><strong>การสื่อสาร:</strong> System.IO.Ports สำหรับ serial communication</li><li><strong>Build System:</strong> MSBuild พร้อม .NET SDK</li></ul>"
+      },
+      {
+        "name": "องค์ประกอบหลักของระบบ",
+        "description": "<ul class='styled-list'><li><strong>การประมวลผลข้อมูลเรดาร์</strong><ul><li><code>DecoderService</code>: ประมวลผลข้อมูลเรดาร์ดิบ</li><li><code>TrackService</code>: จัดการติดตามเครื่องบิน</li></ul></li><li><strong>แผนที่ภูมิศาสตร์</strong><ul><li>เชื่อมต่อ <code>GMap.NET</code> สำหรับแสดงแผนที่</li><li><strong>Coordinate Systems:</strong> รองรับระบบพิกัดภูมิศาสตร์หลากหลายแบบ</li><li><strong>Overlays:</strong> จัดการชั้นข้อมูลบนแผนที่ (เรดาร์, เครื่องบิน, หมุด)</li></ul></li><li><strong>ระบบสื่อสาร</strong><ul><li><strong>Serial Communication:</strong> เชื่อมต่อกับฮาร์ดแวร์เรดาร์</li><li><strong>UDP Communication:</strong> รับส่งข้อมูลผ่านเครือข่าย</li><li><strong>Data Channels:</strong> รองรับหลายช่องทางข้อมูล</li></ul></li><li><strong>ส่วนติดต่อผู้ใช้</strong><ul><li><strong>Multi-Form Architecture:</strong> ฟอร์มแยกสำหรับแต่ละฟังก์ชั่น</li><li><strong>Custom Controls:</strong> ควบคุมการแสดงเรดาร์แบบเฉพาะ</li><li><strong>Settings Management:</strong> ระบบตั้งค่าครอบคลุม</li></ul></li></ul>"
+      },
+      {
+        "name": "การจัดการการตั้งค่า",
+        "description": "<ul class='styled-list'><li><strong>หมวดหมู่การตั้งค่า</strong><ul><li><strong>General Settings:</strong> การตั้งค่าทั่วไปของแอปพลิเคชัน</li><li><strong>Map Settings:</strong> ค่าการแสดงผลแผนที่</li><li><strong>Communication Settings:</strong> ตั้งค่าการสื่อสารผ่าน Serial และ UDP</li><li><strong>Display Settings:</strong> ตัวเลือก UI และการแสดงผล</li></ul></li><li><strong>ไฟล์ตั้งค่า</strong><ul><li>ใช้ระบบการตั้งค่าของ .NET</li><li>มีคลาสตั้งค่าเฉพาะใน <code>Managers/SettingCus/</code></li><li>จัดเก็บค่าต่าง ๆ ของผู้ใช้แบบถาวร</li></ul></li></ul>"
+      },
+      {
+        "name": "กระบวนการประมวลผลข้อมูล",
+        "description": "<ul class='styled-list'><li><strong>แหล่งรับข้อมูล</strong><ul><li><strong>Serial Ports:</strong> ต่อกับฮาร์ดแวร์โดยตรง</li><li><strong>UDP Network:</strong> ข้อมูลจากเครือข่าย</li><li><strong>File Input:</strong> เล่นซ้ำข้อมูลบันทึก</li></ul></li><li><strong>ขั้นตอนประมวลผล</strong><ul><li><strong>Data Reception:</strong> รับข้อมูลดิบ</li><li><strong>Decoding:</strong> ประมวลผลและแปลความหมาย</li><li><strong>Track Processing:</strong> ระบุและติดตามเครื่องบิน</li><li><strong>Display Update:</strong> อัปเดตการแสดงผลแบบเรียลไทม์</li></ul></li><li><strong>ผลลัพธ์</strong><ul><li>แสดงเรดาร์เรียลไทม์</li><li>ข้อมูลติดตามเครื่องบิน</li><li>ระบบแจ้งเตือนและเตือนภัย</li><li>บันทึกข้อมูลและจัดเก็บ</li></ul></li></ul>"
+      },
+      {
+        "name": "แนวทางแก้ไขปัญหาเบื้องต้น",
+        "description": "<ul class='styled-list'><li><strong>ปัญหาทั่วไป</strong><ul><li><strong>\"ไม่สามารถโหลดแผนที่ได้\"</strong><ul><li>ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต</li><li>ตรวจสอบการตั้งค่า proxy หากมี</li><li>ลองเปลี่ยนผู้ให้บริการแผนที่</li></ul></li><li><strong>\"ไม่สามารถเข้าถึงพอร์ตอนุกรม\"</strong><ul><li>รันโปรแกรมในโหมดผู้ดูแลระบบ</li><li>ตรวจสอบว่าพอร์ตถูกใช้โดยแอปพลิเคชันอื่นหรือไม่</li><li>ตรวจสอบว่าค่าพอร์ตตรงกับฮาร์ดแวร์หรือไม่</li></ul></li><li><strong>\"แอปพลิเคชันไม่เริ่มทำงาน\"</strong><ul><li>ตรวจสอบการติดตั้ง .NET runtime</li><li>ตรวจสอบว่า dependencies ครบถ้วน</li><li>ตรวจสอบบันทึก (logs) ของแอปพลิเคชัน</li></ul></li></ul></li></ul>"
+      },
+      {
+        "name": "คู่มือการใช้งาน",
+        "description": "<ul><li>เริ่มต้นโปรแกรม<ul><li>ดับเบิลคลิกไฟล์ (Rader-172 ADV.exe) หรือเข้าเว็บแดชบอร์ด</li><li>ระบบจะโหลดโมดูลที่จำเป็น (serial, UDP, file playback)</li></ul></li><li>เลือกแหล่งข้อมูล<ul><li>ใน UI ให้เลือกแหล่งข้อมูล:</li><li>Serial Port – เสียบอุปกรณ์และเลือกพอร์ต (เช่น COM3)</li><li>UDP Network – ใส่ IP และพอร์ตที่ต้องการรับข้อมูล</li><li>File Input – เลือกไฟล์ข้อมูลที่บันทึกไว้เพื่อเล่นซ้ำ</li></ul></li><li>เริ่มประมวลผลข้อมูล<ul><li>กด “on” ในเมนูการตั้งค่าเพื่อเริ่มรับและถอดรหัสข้อมูลแบบเรียลไทม์</li></ul></li><li>ดูหน้าจอเรดาร์แบบเรียลไทม์<ul><li>หน้าจอจะแสดงตำแหน่งและรหัสเครื่องบินแบบเรดาร์</li><li>ซูม เลื่อน หรือกรองเครื่องบินตามพารามิเตอร์ (ความสูง, ID ฯลฯ)</li></ul></li><li>ตรวจสอบข้อมูลเครื่องบิน<ul><li>คลิกหรือชี้เมาส์ที่ไอคอนเครื่องบินเพื่อดูรายละเอียด (ความเร็ว, ความสูง, ทิศทาง)</li><li>หากเกิดเหตุเตือนหรือแจ้งเตือน (เช่น พบความขัดแย้ง) จะมีป๊อปอัพแจ้งอัตโนมัติ</li></ul></li></ul>"
+      },
+      {
+        "name": "ช่องทางติดต่อทีมสนับสนุน CoSI Lab. มหาวิทยาลัยกรุงเทพ",
+        "description": "<p class='contact'><strong>ทีมพัฒนา:</strong> +662 407 3888 ต่อ 2310</p>"
+      }
+    ]
+  }
   }
 }

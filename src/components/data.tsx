@@ -34,7 +34,7 @@ export default function dataLayout({
             {features.map((feature) => (
                 <li className="p-5 my-5" id={feature.name} key={feature.name}>
                     <h3 className="text-2xl font-bold">{feature.name}</h3>
-                    <p className="list-inside p-5">{feature.description}</p>
+                    <p className="list-inside p-5 custom-list" dangerouslySetInnerHTML={{ __html: feature.description }}></p>
                     {feature.video ? (
                         <div className="flex justify-center">
                             <video
@@ -63,7 +63,7 @@ export default function dataLayout({
     );
 
     const SectionDisplay = ({ title, section }: { title: string; section: Section }) => (
-        <section id={title} className="py-10 px-8 mx-96">
+        <section id={title} className="py-10 px-8 ml-72">
             <div className="p-6">
                 <div className="flex flex-col">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">{title}</h2>
